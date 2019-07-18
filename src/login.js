@@ -8,9 +8,18 @@ export default class Login extends Component {
                 <h1>Welcome to GOmegle!!!</h1>
                 <div>
                     <form>
+                        <div>
+                        <label htmlFor="channel"> Select group : </label>
+                        <select  id='channel'>
+                            <option value="friends">Friends</option>
+                            <option value="family">Family</option>
+                            <option value="college">College</option>
+                            <option value="roomies">Roomies</option>
+                        </select>
+                        </div>
                         <label htmlFor="username">Select username</label>
-                        <input onChange={this.props.getUser} id='username' type="text" />
-                        <Link to='/chatRoom'><button type='submit' id='join'>submit</button></Link>
+                        <input  id='username' type="text" />
+                        <Link to='/chatRoom'><button onClick={this.props.getUser} type='submit' id='join'>submit</button></Link>
                     </form>
                 </div>
             </div>
